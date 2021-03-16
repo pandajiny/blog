@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://blog/./src/pages/404.tsx"],"names":["UnknownPage"],"mappings":"4JAEe,SAASA,IACtB,OAAO","file":"component---src-pages-404-tsx-55f4142398d40d97d099.js","sourcesContent":["import React from \"react\";\r\n\r\nexport default function UnknownPage() {\r\n  return <div>404 Page Not found</div>;\r\n}\r\n"],"sourceRoot":""}
