@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://blog/./src/pages/index.tsx"],"names":["Home"],"mappings":"0JAEe,SAASA,IACtB,OAAO","file":"component---src-pages-index-tsx-cbe7039e97981b0b7880.js","sourcesContent":["import React from \"react\";\r\n\r\nexport default function Home() {\r\n  return <div>Home Page</div>;\r\n}\r\n"],"sourceRoot":""}
