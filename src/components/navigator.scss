@@ -1,0 +1,20 @@
+@use '../styles/colors.scss';
+.navigator {
+  display: flex;
+  flex-direction: row;
+
+  > .nav-item {
+    margin: 4px 12px;
+  }
+}
+
+.nav-item {
+  > a {
+    color: colors.$text-disabled;
+  }
+
+  > a:hover,
+  a.active {
+    color: colors.$text-secondary;
+  }
+}

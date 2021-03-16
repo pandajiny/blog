@@ -1,0 +1,28 @@
+@use "../../styles/colors.scss";
+
+.project-list {
+  > .project-item {
+    margin: 32px 16px;
+  }
+}
+
+.project-item {
+  padding: 16px 32px;
+  border: 1px solid colors.$gray;
+  border-radius: 8px;
+  cursor: pointer;
+
+  > h3 {
+    padding-bottom: 4px;
+    margin-left: 4px;
+    color: colors.$text-secondary;
+  }
+  > a {
+    font-style: italic;
+    color: colors.$text-disabled;
+  }
+
+  > p {
+    margin-top: 16px;
+  }
+}
