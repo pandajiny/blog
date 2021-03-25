@@ -1,0 +1,37 @@
+import React from "react";
+import { Icon } from ".";
+import ICON_TS from "../../images/icons/icon_typescript.png";
+import ICON_NODE from "../../images/icons/icon_nodejs.png";
+import ICON_NEST from "../../images/icons/icon_nestjs.png";
+import ICON_REACT from "../../images/icons/icon_react.png";
+import ICON_GATSBY from "../../images/icons/icon_gatsby.png";
+
+import ICON_HTML from "../../images/icons/icon_html.png";
+import ICON_PWA from "../../images/icons/icon_pwa.png";
+
+import ICON_MYSQL from "../../images/icons/icon_mysql.png";
+import ICON_DOCKER from "../../images/icons/icon_docker.png";
+
+const ICONS = {
+  typescript: ICON_TS as string,
+  react: ICON_REACT as string,
+  gatsby: ICON_GATSBY as string,
+  docker: ICON_DOCKER as string,
+  mysql: ICON_MYSQL as string,
+  html: ICON_HTML as string,
+  pwa: ICON_PWA as string,
+  node: ICON_NODE as string,
+  nest: ICON_NEST as string,
+};
+
+export type Stack = keyof typeof ICONS;
+
+export const StackIcons = (props: { stacks: Stack[] }) => {
+  return (
+    <div className="stack-icons">
+      {props.stacks.sort().map((stack) => (
+        <Icon src={ICONS[stack]} />
+      ))}
+    </div>
+  );
+};
