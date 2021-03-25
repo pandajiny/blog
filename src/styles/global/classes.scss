@@ -1,14 +1,42 @@
 @use '../colors.scss';
+
 * {
   padding: 0px;
   margin: 0px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.page {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 64px;
+  width: 100%;
+  max-width: 1000px;
+
+  // background-color: azure;
+
+  > .title {
+    margin-left: 24px;
+    color: colors.$text-secondary;
+  }
+
+  > .navigator {
+    margin-top: 16px;
+  }
 }
 
 p,
 a,
 h1,
 h2,
-h3 {
+h3,
+label {
+  display: block;
+  width: fit-content;
+  height: fit-content;
   font-weight: 500;
   color: colors.$text-primary;
 }
@@ -26,6 +54,9 @@ h3 {
 
 p {
   font-size: 18px;
+}
+label {
+  font-size: 16px;
 }
 
 a {

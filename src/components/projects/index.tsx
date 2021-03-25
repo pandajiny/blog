@@ -1,6 +1,6 @@
 import React from "react";
 import { Stack, StackIcons } from "../icons/stack-icons";
-import "./projects-component.scss";
+import "./index.scss";
 
 const projects: ProjectItemProps[] = [
   {
@@ -66,10 +66,14 @@ function ProjectItem({
   }
   return (
     <div className="project-item" onClick={redirect}>
-      <h3>{title}</h3>
+      <h2 className="title">{title}</h2>
       {link && <a href={link}>{link}</a>}
       {stacks && <StackIcons stacks={stacks} />}
       <p>{description}</p>
+      <div className="actions">
+        <a>Visit page</a>
+        <a>View detail</a>
+      </div>
     </div>
   );
 }

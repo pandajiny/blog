@@ -1,14 +1,24 @@
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
 .icon {
   padding: 4px;
   > img {
     width: 32px;
     height: 32px;
     border-radius: 50%;
+
+    @include mobile() {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
 
 .stack-icons {
   display: flex;
   flex-direction: row;
-  padding: 4px;
 }

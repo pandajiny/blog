@@ -1,0 +1,105 @@
+@use "../../styles/colors.scss";
+
+@mixin mobile {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+.project-list {
+  width: 100%;
+  .project-item {
+    margin: 4px 12px;
+  }
+}
+
+.project-item {
+  padding: 8px 16px;
+  @include desktop() {
+    padding: 16px 32px;
+  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  > .title {
+    font-size: 20px;
+    @include desktop() {
+      font-size: 28px;
+    }
+    margin-left: 8px;
+    padding: 4px;
+    color: colors.$text-primary;
+  }
+
+  > .title:hover {
+    text-decoration: underline;
+  }
+
+  > a {
+    display: none;
+    @include desktop() {
+      display: block;
+      margin-top: 4px;
+      color: colors.$text-disabled;
+      font-size: 18px;
+    }
+  }
+  > a:hover {
+    text-decoration: underline;
+  }
+
+  > .stack-icons {
+    @include mobile {
+      padding: 4px 0px;
+    }
+    @include desktop {
+      margin-top: 8px;
+      align-self: flex-end;
+      position: absolute;
+    }
+  }
+
+  > p {
+    display: none;
+    @include desktop {
+      display: block;
+      padding-top: 16px;
+      margin-top: 16x;
+      margin-left: 4px;
+      width: 100%;
+    }
+  }
+
+  > .actions {
+    margin-top: 4px;
+
+    display: flex;
+    flex-direction: row;
+
+    > a {
+      font-size: 16px;
+      margin-left: 8px;
+      color: colors.$text-disabled;
+    }
+
+    @include desktop() {
+      display: none;
+    }
+  }
+
+  border-bottom: 1px solid colors.$lightgray;
+}
+
+.project-item:hover {
+  cursor: pointer;
+}
+.project-item:last-child {
+  border-bottom: none;
+}
