@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.scss";
 import { Navigator } from "../../components/navigator";
 import { ProjectList } from "../../components/projects";
 

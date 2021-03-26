@@ -7,15 +7,15 @@ const projects: ProjectItemProps[] = [
     title: "Blog",
     description:
       "This blog is made with React.js framework. Using gatsby for build static page and deploy to gh-page service",
-    id: "scheduler",
     stacks: ["react", "gatsby", "typescript", "scss"],
     link: "https://blog.pandajiny.com",
+    introducePage: "https://pandajiny.tistory.com/category/Projects/Blog",
   },
   {
     title: "Scheduler",
+    introducePage: "https://pandajiny.tistory.com/category/Projects/Scheduler",
     description:
       "Scheduler web application supporting mobile environment by PWA.",
-    id: "scheduler",
     stacks: ["html", "scss", "pwa", "typescript", "docker", "node"],
     link: "https://scheduler.pandajiny.com",
   },
@@ -23,16 +23,17 @@ const projects: ProjectItemProps[] = [
     title: "Foodgram",
     description:
       "Map application for note my places. Remember and write a review.",
-    id: "scheduler",
     stacks: ["react", "nest", "docker", "node", "typescript"],
     link: "https://food.pandajiny.com",
+    introducePage: "https://pandajiny.tistory.com/category/Projects/Foodgram",
   },
   {
-    title: "Authentication",
+    title: "Auth Service",
     description:
       "Authentication service using Express.js framework. It manage client session with Redis DB and another service can be shared client auth information.",
     stacks: ["node", "express", "docker", "typescript"],
-    id: "authentication",
+    introducePage:
+      "https://pandajiny.tistory.com/category/Projects/Auth%20Service",
   },
 ];
 
@@ -49,7 +50,7 @@ export function ProjectList() {
 export interface ProjectItemProps {
   title: string;
   description: string;
-  id: string;
+  introducePage?: string;
   stacks?: Stack[];
   link?: string;
 }
@@ -57,23 +58,27 @@ export interface ProjectItemProps {
 function ProjectItem({
   title,
   description,
-  id,
+  introducePage,
   link,
   stacks,
 }: ProjectItemProps) {
-  function redirect() {
-    location.href = `/projects/${id}`;
+  function goIntroducePage() {
+    if (introducePage) {
+      location.href = introducePage;
+    }
   }
   return (
-    <div className="project-item" onClick={redirect}>
-      <h2 className="title">{title}</h2>
-      {link && <a href={link}>{link}</a>}
+    <div className="project-item">
+      <h2 className="title" onClick={goIntroducePage}>
+        {title}
+      </h2>
+      {link && (
+        <a className="link" href={link}>
+          {link}
+        </a>
+      )}
       {stacks && <StackIcons stacks={stacks} />}
-      <p>{description}</p>
-      <div className="actions">
-        <a>Visit page</a>
-        <a>View detail</a>
-      </div>
+      <p className="description">&nbsp;&nbsp;{description}</p>
     </div>
   );
 }

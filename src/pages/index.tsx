@@ -6,14 +6,12 @@ export default function Home() {
     <div className="page">
       <div className="header">
         <h2 className="title">Pandajiny blog.</h2>
-        <h3 className="page-title">Welcome!</h3>
+        {/* <h3 className="page-title">Welcome!</h3> */}
       </div>
       <div className="sidebar">
         <Navigator />
       </div>
-      <div className="content">
-        <h3>Welcome to pandajiny's blog</h3>
-      </div>
+      <div className="content">{/* <h1>안녕하세요!</h1> */}</div>
     </div>
   );
 }
