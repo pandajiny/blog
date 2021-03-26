@@ -1,5 +1,9 @@
 import React from "react";
-import "./navigator.scss";
+import { Icon } from "../icons";
+import ICON_GITHUB from "../../images/icons/icon_github.png";
+import ICON_INSTAGRAM from "../../images/icons/icon_instagram.png";
+import ICON_FACEBOOK from "../../images/icons/icon_facebook.png";
+import "./index.scss";
 
 export interface NavigatorProps {
   items: NavItemProps[];
@@ -21,9 +25,26 @@ const navs: NavItemProps[] = [
   },
 ];
 
+function goGithub() {
+  location.href = "https://github.com/pandajiny";
+}
+
+function goInstagram() {
+  location.href = "https://www.instagram.com/pandajiny";
+}
+
+function goFacebook() {
+  location.href = "https://www.facebook.com/profile.php?id=100009892637795";
+}
+
 export function Navigator() {
   return (
     <div className="navigator">
+      <div className="sns-icons">
+        <Icon size={28} src={ICON_GITHUB} onClick={goGithub} />
+        <Icon size={28} src={ICON_INSTAGRAM} onClick={goInstagram} />
+        <Icon size={28} src={ICON_FACEBOOK} onClick={goFacebook} />
+      </div>
       {navs.map((item) => (
         <NavItem key={Math.random()} {...item}></NavItem>
       ))}
