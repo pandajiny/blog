@@ -14,9 +14,6 @@
 
 .project-list {
   width: 100%;
-  .project-item {
-    margin: 4px 12px;
-  }
 }
 
 .project-item {
@@ -98,7 +95,10 @@
 }
 
 .project-item:hover {
-  cursor: pointer;
+  @include desktop() {
+    cursor: pointer;
+    background-color: colors.$lightgray;
+  }
 }
 .project-item:last-child {
   border-bottom: none;

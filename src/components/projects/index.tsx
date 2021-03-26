@@ -8,7 +8,7 @@ const projects: ProjectItemProps[] = [
     description:
       "This blog is made with React.js framework. Using gatsby for build static page and deploy to gh-page service",
     id: "scheduler",
-    stacks: ["react", "typescript", "gatsby"],
+    stacks: ["react", "gatsby", "typescript", "scss"],
     link: "https://blog.pandajiny.com",
   },
   {
@@ -16,7 +16,7 @@ const projects: ProjectItemProps[] = [
     description:
       "Scheduler web application supporting mobile environment by PWA.",
     id: "scheduler",
-    stacks: ["html", "pwa", "typescript", "docker", "node"],
+    stacks: ["html", "scss", "pwa", "typescript", "docker", "node"],
     link: "https://scheduler.pandajiny.com",
   },
   {
@@ -24,14 +24,14 @@ const projects: ProjectItemProps[] = [
     description:
       "Map application for note my places. Remember and write a review.",
     id: "scheduler",
-    stacks: ["nest", "react", "docker", "node", "typescript"],
+    stacks: ["react", "nest", "docker", "node", "typescript"],
     link: "https://food.pandajiny.com",
   },
   {
     title: "Authentication",
     description:
       "Authentication service using Express.js framework. It manage client session with Redis DB and another service can be shared client auth information.",
-    stacks: ["docker", "node", "typescript"],
+    stacks: ["node", "express", "docker", "typescript"],
     id: "authentication",
   },
 ];
