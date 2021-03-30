@@ -1,3 +1,5 @@
+const path = require("path");
+
 module.exports = {
   plugins: [
     "gatsby-plugin-sass",
@@ -6,6 +8,16 @@ module.exports = {
       options: {
         publicPath: "public",
         rmPublicFolder: false,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-alias-imports`,
+      options: {
+        alias: {
+          "@components": path.resolve(__dirname, "src/components"),
+          "@styles": path.resolve(__dirname, "src/styles"),
+        },
+        extensions: [],
       },
     },
   ],

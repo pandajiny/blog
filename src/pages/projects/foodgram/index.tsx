@@ -3,8 +3,8 @@ import React from "react";
 
 export default function () {
   return (
-    <PageComponent pageName="home">
-      <h1>Welcome Pandajiny blog.</h1>
+    <PageComponent pageName="project-foodgram" title="Foodgram project">
+      <h1>Foodgram</h1>
     </PageComponent>
   );
 }

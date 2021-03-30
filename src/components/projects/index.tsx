@@ -2,6 +2,14 @@ import React from "react";
 import { Stack, StackIcons } from "../icons/stack-icons";
 import "./index.scss";
 
+export interface ProjectItemProps {
+  title: string;
+  description: string;
+  introducePage?: string;
+  stacks?: Stack[];
+  link?: string;
+}
+
 const projects: ProjectItemProps[] = [
   {
     title: "Blog",
@@ -47,25 +55,13 @@ export function ProjectList() {
   );
 }
 
-export interface ProjectItemProps {
-  title: string;
-  description: string;
-  introducePage?: string;
-  stacks?: Stack[];
-  link?: string;
-}
-
-function ProjectItem({
-  title,
-  description,
-  introducePage,
-  link,
-  stacks,
-}: ProjectItemProps) {
+function ProjectItem({ title, description, link, stacks }: ProjectItemProps) {
   function goIntroducePage() {
-    if (introducePage) {
-      location.href = introducePage;
-    }
+    const projectName = title.toLowerCase().replace(" ", "-");
+    location.pathname = `/projects/${projectName}`;
+    // if (introducePage) {
+    //   location.href = introducePage;
+    // }
   }
   return (
     <div className="project-item">
