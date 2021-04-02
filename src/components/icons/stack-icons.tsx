@@ -1,22 +1,22 @@
 import React from "react";
 import { Icon } from ".";
 
-import ICON_TS from "../../images/icons/icon_typescript.png";
-import ICON_NODE from "../../images/icons/icon_nodejs.png";
-import ICON_NEST from "../../images/icons/icon_nestjs.png";
-import ICON_EXPRESS from "../../images/icons/icon_express.png";
+import ICON_TS from "@icons/icon_typescript.png";
+import ICON_NODE from "@icons/icon_nodejs.png";
+import ICON_NEST from "@icons/icon_nestjs.png";
+import ICON_EXPRESS from "@icons/icon_express.png";
 
-import ICON_REACT from "../../images/icons/icon_react.png";
-import ICON_GATSBY from "../../images/icons/icon_gatsby.png";
+import ICON_REACT from "@icons/icon_react.png";
+import ICON_GATSBY from "@icons/icon_gatsby.png";
 
-import ICON_HTML from "../../images/icons/icon_html.png";
-import ICON_SCSS from "../../images/icons/icon_scss.png";
-import ICON_PWA from "../../images/icons/icon_pwa.png";
+import ICON_HTML from "@icons/icon_html.png";
+import ICON_SCSS from "@icons/icon_scss.png";
+import ICON_PWA from "@icons/icon_pwa.png";
 
-import ICON_MYSQL from "../../images/icons/icon_mysql.png";
-import ICON_DOCKER from "../../images/icons/icon_docker.png";
+import ICON_MYSQL from "@icons/icon_mysql.png";
+import ICON_DOCKER from "@icons/icon_docker.png";
 
-import ICON_MORE from "../../images/icons/icon_more.svg";
+import ICON_MORE from "@icons/icon_more.svg";
 
 const ICONS = {
   typescript: ICON_TS as string,

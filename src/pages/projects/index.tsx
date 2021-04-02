@@ -5,7 +5,7 @@ import "./index.scss";
 
 export default function () {
   return (
-    <PageComponent pageName="projects">
+    <PageComponent pageName="projects" title="Projects">
       <ProjectList />
     </PageComponent>
   );

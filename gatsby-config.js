@@ -15,6 +15,7 @@ module.exports = {
       options: {
         alias: {
           "@components": path.resolve(__dirname, "src/components"),
+          "@icons": path.resolve(__dirname, "src/images/icons"),
           "@styles": path.resolve(__dirname, "src/styles"),
         },
         extensions: [],

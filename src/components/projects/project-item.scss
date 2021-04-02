@@ -1,0 +1,70 @@
+@use "@styles/colors.scss";
+@import "@styles/responsive.scss";
+
+.project-item {
+  padding: 8px 16px;
+  @include desktop() {
+    padding: 16px 20px;
+  }
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  > .link {
+    display: block;
+    color: colors.$text-disabled;
+    font-size: 18px;
+    align-self: flex-end;
+    @include desktop() {
+      position: absolute;
+    }
+  }
+  > .link:hover {
+    text-decoration: underline;
+  }
+
+  > .stack-icons {
+    @include mobile {
+      padding: 4px 0px;
+    }
+    @include desktop {
+      position: absolute;
+      align-self: flex-end;
+      margin-top: 24px;
+    }
+  }
+
+  > .title {
+    font-size: 20px;
+    @include desktop() {
+      margin-left: 4px;
+      margin-top: 8px;
+      font-size: 28px;
+    }
+    color: colors.$text-primary;
+  }
+  > .title:hover {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+
+  > .posts {
+    margin-top: 4px;
+    color: colors.$text-disabled;
+  }
+
+  > .description {
+    color: colors.$text-secondary;
+
+    @include desktop {
+      margin-top: 16px;
+      width: 100%;
+    }
+  }
+
+  border-bottom: 1px solid colors.$lightgray;
+}
+
+.project-item:last-child {
+  border-bottom: none;
+}

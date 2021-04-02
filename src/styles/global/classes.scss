@@ -1,4 +1,6 @@
 @use '../colors.scss';
+@import "../responsive.scss";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500&display=swap");
 
 * {
   padding: 0px;
@@ -6,7 +8,8 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  // font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 p,
@@ -18,7 +21,7 @@ label {
   display: block;
   width: fit-content;
   height: fit-content;
-  font-weight: 500;
+  font-weight: 400;
   color: colors.$text-primary;
 }
 
@@ -34,7 +37,12 @@ h3 {
 }
 
 p {
-  font-size: 18px;
+  @include desktop {
+    font-size: 18px;
+  }
+  @include mobile {
+    font-size: 16px;
+  }
 }
 label {
   font-size: 16px;
@@ -47,4 +55,12 @@ a {
 a:link,
 a:visited {
   text-decoration: none;
+}
+
+button {
+  border: none;
+  outline: none;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: 18px;
+  color: colors.$text-secondary;
 }
