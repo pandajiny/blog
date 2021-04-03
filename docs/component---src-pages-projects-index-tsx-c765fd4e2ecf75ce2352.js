@@ -1,0 +1,2 @@
+(self.webpackChunkblog=self.webpackChunkblog||[]).push([[845],{6551:function(e,t,n){"use strict";n.r(t),n.d(t,{default:function(){return c}});var l=n(7294),r=n(2344),u=n(4192);function c(){return l.createElement(r.I,{pageName:"projects",title:"Projects"},l.createElement(u.l,null))}}}]);
+//# sourceMappingURL=component---src-pages-projects-index-tsx-c765fd4e2ecf75ce2352.js.map
