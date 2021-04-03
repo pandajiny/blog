@@ -7,7 +7,7 @@ import ICON_EXTEND from "@icons/icon_more.svg";
 
 interface PageProps {
   pageName: string;
-  title?: string;
+  title: string;
   children?: React.ReactNode;
 }
 
