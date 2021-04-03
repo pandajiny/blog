@@ -1,5 +1,6 @@
 import React from "react";
 import { Stack, StackIcons } from "../icons/stack-icons";
+import "./project-list.scss";
 import "./project-item.scss";
 import "./project-post.scss";
 
@@ -74,21 +75,27 @@ function ProjectItem({
     //   location.href = introducePage;
     // }
   }
+
+  const Title = () => (
+    <a className="title" onClick={goIntroducePage}>
+      {title}
+    </a>
+  );
+
+  const Link = () => (
+    <a className="link" href={link}>
+      {link}
+    </a>
+  );
+
   return (
     <div className="project-item">
       {stacks && <StackIcons stacks={stacks} />}
-      {link && (
-        <a className="link" href={link}>
-          {link}
-        </a>
-      )}
-      <a className="title" onClick={goIntroducePage}>
-        {title}
-      </a>
+      <Title />
+      {link && <Link />}
       <p className="posts">
         {cntPosts > 0 ? `${cntPosts} Related posts` : "None related Posts"}
       </p>
-
       <p className="description">{description}</p>
     </div>
   );

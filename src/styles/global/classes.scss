@@ -33,7 +33,6 @@ h2 {
 
 h3 {
   font-size: 24px;
-  font-weight: 500;
 }
 
 p {
@@ -41,7 +40,7 @@ p {
     font-size: 18px;
   }
   @include mobile {
-    font-size: 16px;
+    font-size: 14px;
   }
 }
 label {

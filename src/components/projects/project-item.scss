@@ -2,10 +2,6 @@
 @import "@styles/responsive.scss";
 
 .project-item {
-  padding: 8px 16px;
-  @include desktop() {
-    padding: 16px 20px;
-  }
   position: relative;
   display: flex;
   flex-direction: column;
@@ -13,10 +9,12 @@
   > .link {
     display: block;
     color: colors.$text-disabled;
-    font-size: 18px;
-    align-self: flex-end;
+
+    @include mobile() {
+      font-size: 12px;
+    }
     @include desktop() {
-      position: absolute;
+      font-size: 14px;
     }
   }
   > .link:hover {
@@ -24,24 +22,29 @@
   }
 
   > .stack-icons {
-    @include mobile {
-      padding: 4px 0px;
+    position: absolute;
+    align-self: flex-end;
+
+    @include mobile() {
+      margin-top: 6px;
     }
-    @include desktop {
-      position: absolute;
-      align-self: flex-end;
+    @include desktop() {
       margin-top: 24px;
     }
   }
 
   > .title {
-    font-size: 20px;
+    font-weight: 500;
+    margin-left: 4px;
+    margin-top: 8px;
+    color: colors.$text-primary;
+
+    @include mobile() {
+      font-size: 22px;
+    }
     @include desktop() {
-      margin-left: 4px;
-      margin-top: 8px;
       font-size: 28px;
     }
-    color: colors.$text-primary;
   }
   > .title:hover {
     cursor: pointer;
@@ -49,22 +52,22 @@
   }
 
   > .posts {
-    margin-top: 4px;
     color: colors.$text-disabled;
+    @include desktop() {
+      margin-left: 4px;
+      margin-top: 8px;
+    }
   }
 
   > .description {
     color: colors.$text-secondary;
 
-    @include desktop {
+    @include mobile() {
+      margin-top: 8px;
+    }
+
+    @include desktop() {
       margin-top: 16px;
-      width: 100%;
     }
   }
-
-  border-bottom: 1px solid colors.$lightgray;
-}
-
-.project-item:last-child {
-  border-bottom: none;
 }

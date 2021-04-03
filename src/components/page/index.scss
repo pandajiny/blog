@@ -30,8 +30,11 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: 8px;
-    padding: 8px;
+    padding: 8px 16px;
+
+    @include mobile() {
+      border-bottom: 1px solid colors.$lightgray;
+    }
 
     @include desktop() {
       height: 100px;
@@ -86,18 +89,30 @@
     @include mobile() {
       right: 0;
       position: absolute;
-      padding: 8px;
+      padding: 8px 16px;
       height: 100%;
       z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: flex-end;
-      background-color: colors.$lightgray;
+      background-color: colors.$white;
+      border-left: 1px solid colors.$lightgray;
+
+      > .close-button {
+        font-size: 14px;
+        // padding: 4px 8px;
+        padding: 8px 0px;
+      }
     }
   }
 
   > .content {
     grid-area: main;
-    padding: 16px 12px;
+    @include mobile() {
+      padding: 12px 8px;
+    }
+    @include desktop() {
+      padding: 16px 12px;
+    }
   }
 }

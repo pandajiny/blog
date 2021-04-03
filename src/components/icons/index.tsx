@@ -3,14 +3,15 @@ import "./index.scss";
 
 interface IconProps {
   src: string;
+  className?: string;
   size?: number;
   onClick?: () => void;
 }
 
-export const Icon = ({ src, size, onClick }: IconProps) => {
+export const Icon = ({ src, className, size, onClick }: IconProps) => {
   return (
     <div
-      className="icon"
+      className={`icon ${className}`}
       onClick={onClick}
       style={onClick ? { cursor: "pointer" } : undefined}
     >
