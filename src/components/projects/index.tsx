@@ -1,4 +1,12 @@
 import React from "react";
+import {
+  AuthServiceProject,
+  BlogProject,
+  FoodgramProject,
+  Project,
+  ProjectPost as ProjectPostInterface,
+  SchedulerProject,
+} from "./data";
 import { Stack, StackIcons } from "../icons/stack-icons";
 import "./project-list.scss";
 import "./project-item.scss";
@@ -13,43 +21,11 @@ export interface ProjectItemProps {
   link?: string;
 }
 
-const projects: ProjectItemProps[] = [
-  {
-    title: "Scheduler",
-    introducePage: "https://pandajiny.tistory.com/category/Projects/Scheduler",
-    description: "모바일과 데스크탑 환경을 지원하는 캘린더 어플리케이션입니다.",
-    stacks: ["html", "scss", "pwa", "typescript", "docker", "node"],
-    cntPosts: 3,
-    link: "https://scheduler.pandajiny.com",
-  },
-  {
-    title: "Auth Service",
-    description:
-      "각각의 서비스 간 공통으로 사용되는 보안 모듈입니다. 세션을 기반으로 동작합니다.",
-    stacks: ["node", "express", "docker", "typescript"],
-    cntPosts: 2,
-    introducePage:
-      "https://pandajiny.tistory.com/category/Projects/Auth%20Service",
-  },
-  {
-    title: "Blog",
-    description:
-      "정적 React 페이지를 생성해주는 Gatsby Framework 를 사용하여 만든 블로그입니다.",
-    stacks: ["react", "gatsby", "typescript", "scss"],
-    cntPosts: 1,
-    link: "https://blog.pandajiny.com",
-    introducePage: "https://pandajiny.tistory.com/category/Projects/Blog",
-  },
-
-  {
-    title: "Foodgram",
-    description:
-      "네이버 지도 API 를 사용하여 만든 맛집 지도 어플리케이션입니다.",
-    stacks: ["react", "nest", "docker", "node", "typescript"],
-    link: "https://food.pandajiny.com",
-    cntPosts: 1,
-    introducePage: "https://pandajiny.tistory.com/category/Projects/Foodgram",
-  },
+const projects: Project[] = [
+  SchedulerProject,
+  AuthServiceProject,
+  FoodgramProject,
+  BlogProject,
 ];
 
 export function ProjectList() {
@@ -57,21 +33,22 @@ export function ProjectList() {
     <div className="project-list">
       {projects
         // .sort((prev, next) => next.cntPosts - prev.cntPosts)
-        .map((item) => (
-          <ProjectItem key={Math.random()} {...item}></ProjectItem>
+        .map((project) => (
+          <ProjectItem key={Math.random()} project={project}></ProjectItem>
         ))}
     </div>
   );
 }
 
-function ProjectItem({
-  title,
-  description,
-  link,
-  stacks,
-  introducePage,
-  cntPosts,
-}: ProjectItemProps) {
+function ProjectItem(props: { project: Project }) {
+  const {
+    description,
+    post,
+    stacks,
+    title,
+    link,
+    linkIntroduce,
+  } = props.project;
   function goIntroducePage() {
     location.href = `/projects/${title.toLowerCase().replace(" ", "-")}`;
     // if (introducePage) {
@@ -93,32 +70,24 @@ function ProjectItem({
 
   return (
     <div className="project-item">
-      {stacks && <StackIcons stacks={stacks} />}
+      <StackIcons stacks={stacks} />
       <Title />
       {link && <Link />}
       <p className="posts">
-        {cntPosts > 0 ? `${cntPosts} Related posts` : "None related Posts"}
+        {post.posts.length > 0
+          ? `${post.posts.length} Related posts`
+          : "None related Posts"}
       </p>
       <p className="description">{description}</p>
     </div>
   );
 }
 
-interface ProjectPostProps {
-  description: string[];
-  posts: Post[];
-}
-
-export interface Post {
-  title: string;
-  link: string;
-}
-
-export function ProjectPost({ description, posts }: ProjectPostProps) {
+export function ProjectPost({ descriptions, posts }: ProjectPostInterface) {
   return (
     <div className="project-post">
       <h2>프로젝트 설명</h2>
-      {description.map((sentence) => (
+      {descriptions.map((sentence) => (
         <p className="description">&nbsp;&nbsp;{sentence}</p>
       ))}
       {posts.map((post, index) => (
