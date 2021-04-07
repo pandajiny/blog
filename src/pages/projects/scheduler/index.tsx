@@ -16,6 +16,10 @@ const posts: Post[] = [
     title: "Web Component : Framework 없이 구현하는 SPA",
     link: "https://pandajiny.tistory.com/10?category=972245",
   },
+  {
+    title: "Custom Router 작성 : Framework 없이 구현하는 SPA2",
+    link: "https://pandajiny.tistory.com/12",
+  },
 ];
 
 export default function () {

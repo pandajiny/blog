@@ -28,7 +28,7 @@ const projects: ProjectItemProps[] = [
     introducePage: "https://pandajiny.tistory.com/category/Projects/Scheduler",
     description: "모바일과 데스크탑 환경을 지원하는 캘린더 어플리케이션입니다.",
     stacks: ["html", "scss", "pwa", "typescript", "docker", "node"],
-    cntPosts: 2,
+    cntPosts: 3,
     link: "https://scheduler.pandajiny.com",
   },
   {
@@ -37,7 +37,7 @@ const projects: ProjectItemProps[] = [
       "네이버 지도 API 를 사용하여 만든 맛집 지도 어플리케이션입니다.",
     stacks: ["react", "nest", "docker", "node", "typescript"],
     link: "https://food.pandajiny.com",
-    cntPosts: 0,
+    cntPosts: 1,
     introducePage: "https://pandajiny.tistory.com/category/Projects/Foodgram",
   },
   {
