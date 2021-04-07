@@ -1,0 +1,2 @@
+(self.webpackChunkblog=self.webpackChunkblog||[]).push([[469],{5868:function(t,e,n){"use strict";n.r(e),n.d(e,{default:function(){return l}});var o=n(7301),r=n(4192),a=n(7294),c=["지도 API를 바탕으로 개발된 평소에 관심있었던 식당을 저장 및 리뷰하는 서비스 입니다."],i=[{title:"프로젝트 개요",link:"https://pandajiny.tistory.com/9"}];function l(){return a.createElement(o.I,{pageName:"project-foodgram",title:"Foodgram project"},a.createElement(r.$,{description:c,posts:i}))}}}]);
+//# sourceMappingURL=component---src-pages-projects-foodgram-index-tsx-4b8c84f48fb55b1d305e.js.map
