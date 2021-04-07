@@ -15,12 +15,12 @@
   }
 
   @include desktop() {
-    grid-template-columns: 30% 50% 20%;
+    grid-template-columns: 30% 70%;
     grid-template-rows: auto auto auto;
     grid-template-areas:
-      "none header side"
-      "nav main side"
-      "nav footer side";
+      "none header"
+      "nav main"
+      "nav footer";
   }
 
   > .header {
@@ -71,14 +71,17 @@
   }
 
   > .sidebar {
+    width: auto;
     @include mobile() {
       display: none;
     }
 
     @include desktop() {
       grid-area: nav;
-      display: block;
       margin-right: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
       > .close-button {
         display: none;
       }
@@ -108,11 +111,13 @@
 
   > .content {
     grid-area: main;
+    width: 100%;
     @include mobile() {
       padding: 12px 8px;
     }
     @include desktop() {
       padding: 16px 12px;
+      max-width: 1000px;
     }
   }
 }

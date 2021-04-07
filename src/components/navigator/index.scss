@@ -1,14 +1,9 @@
 @use '../../styles/colors.scss';
 .navigator {
+  width: fit-content;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-
-  > .sns-icons {
-    display: flex;
-    flex-direction: row;
-    margin-bottom: 16px;
-  }
 
   > .nav-item {
     margin: 4px 12px;
