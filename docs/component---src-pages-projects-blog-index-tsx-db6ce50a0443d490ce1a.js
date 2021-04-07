@@ -1,0 +1,2 @@
+(self.webpackChunkblog=self.webpackChunkblog||[]).push([[951],{7286:function(t,e,n){"use strict";n.r(e),n.d(e,{default:function(){return i}});var o=n(7301),r=n(4192),c=n(7294),l=["Gatsby 를 사용하여 제작된 블로그. 정적 웹 페이지로 작성되어 간단하고 빠르다."],a=[{title:"프로젝트 개요",link:"https://pandajiny.tistory.com/13"}];function i(){return c.createElement(o.I,{pageName:"project-blog",title:"Blog project"},c.createElement(r.$,{description:l,posts:a}))}}}]);
+//# sourceMappingURL=component---src-pages-projects-blog-index-tsx-db6ce50a0443d490ce1a.js.map
