@@ -37,7 +37,6 @@
   > .title {
     font-weight: 500;
     margin-left: 4px;
-    margin-top: 8px;
     color: colors.$text-primary;
 
     @include mobile() {

@@ -16,6 +16,9 @@
       padding: 12px 8px;
       border-bottom: 1px solid colors.$lightgray;
     }
+    > .project-item:first-child {
+      padding-top: 0px;
+    }
     > .project-item:last-child {
       border-bottom: none;
     }

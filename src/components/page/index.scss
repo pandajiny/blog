@@ -116,7 +116,7 @@
       padding: 12px 8px;
     }
     @include desktop() {
-      padding: 16px 12px;
+      // padding: px 12px;
       max-width: 1000px;
     }
   }

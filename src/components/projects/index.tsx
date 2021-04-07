@@ -15,30 +15,12 @@ export interface ProjectItemProps {
 
 const projects: ProjectItemProps[] = [
   {
-    title: "Blog",
-    description:
-      "정적 React 페이지를 생성해주는 Gatsby Framework 를 사용하여 만든 블로그입니다.",
-    stacks: ["react", "gatsby", "typescript", "scss"],
-    cntPosts: 0,
-    link: "https://blog.pandajiny.com",
-    introducePage: "https://pandajiny.tistory.com/category/Projects/Blog",
-  },
-  {
     title: "Scheduler",
     introducePage: "https://pandajiny.tistory.com/category/Projects/Scheduler",
     description: "모바일과 데스크탑 환경을 지원하는 캘린더 어플리케이션입니다.",
     stacks: ["html", "scss", "pwa", "typescript", "docker", "node"],
     cntPosts: 3,
     link: "https://scheduler.pandajiny.com",
-  },
-  {
-    title: "Foodgram",
-    description:
-      "네이버 지도 API 를 사용하여 만든 맛집 지도 어플리케이션입니다.",
-    stacks: ["react", "nest", "docker", "node", "typescript"],
-    link: "https://food.pandajiny.com",
-    cntPosts: 1,
-    introducePage: "https://pandajiny.tistory.com/category/Projects/Foodgram",
   },
   {
     title: "Auth Service",
@@ -49,14 +31,35 @@ const projects: ProjectItemProps[] = [
     introducePage:
       "https://pandajiny.tistory.com/category/Projects/Auth%20Service",
   },
+  {
+    title: "Blog",
+    description:
+      "정적 React 페이지를 생성해주는 Gatsby Framework 를 사용하여 만든 블로그입니다.",
+    stacks: ["react", "gatsby", "typescript", "scss"],
+    cntPosts: 1,
+    link: "https://blog.pandajiny.com",
+    introducePage: "https://pandajiny.tistory.com/category/Projects/Blog",
+  },
+
+  {
+    title: "Foodgram",
+    description:
+      "네이버 지도 API 를 사용하여 만든 맛집 지도 어플리케이션입니다.",
+    stacks: ["react", "nest", "docker", "node", "typescript"],
+    link: "https://food.pandajiny.com",
+    cntPosts: 1,
+    introducePage: "https://pandajiny.tistory.com/category/Projects/Foodgram",
+  },
 ];
 
 export function ProjectList() {
   return (
     <div className="project-list">
-      {projects.map((item) => (
-        <ProjectItem key={Math.random()} {...item}></ProjectItem>
-      ))}
+      {projects
+        // .sort((prev, next) => next.cntPosts - prev.cntPosts)
+        .map((item) => (
+          <ProjectItem key={Math.random()} {...item}></ProjectItem>
+        ))}
     </div>
   );
 }
@@ -70,7 +73,7 @@ function ProjectItem({
   cntPosts,
 }: ProjectItemProps) {
   function goIntroducePage() {
-    location.href = `/projects/${title.toLowerCase()}`;
+    location.href = `/projects/${title.toLowerCase().replace(" ", "-")}`;
     // if (introducePage) {
     //   location.href = introducePage;
     // }
