@@ -5,10 +5,11 @@ import React from "react";
 
 const project = SchedulerProject;
 export default function () {
+  const { stacks } = project;
   const { descriptions, posts } = project.post;
   return (
     <PageComponent pageName="project-blog" title="Project scheduler">
-      <ProjectPost posts={posts} descriptions={descriptions} />
+      <ProjectPost posts={posts} descriptions={descriptions} stacks={stacks} />
     </PageComponent>
   );
 }

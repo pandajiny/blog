@@ -1,6 +1,6 @@
 import { Stack } from "../icons/stack-icons";
 
-interface Post {
+export interface Post {
   title: string;
   link: string;
 }
@@ -21,7 +21,16 @@ export const SchedulerProject: Project = {
   title: "Scheduler",
   linkIntroduce: "https://pandajiny.tistory.com/category/Projects/Scheduler",
   description: "모바일과 데스크탑 환경을 지원하는 캘린더 어플리케이션입니다.",
-  stacks: ["html", "scss", "pwa", "typescript", "docker", "node"],
+  stacks: [
+    "html",
+    "scss",
+    "pwa",
+    "typescript",
+    "docker",
+    "node",
+    "nest",
+    "mysql",
+  ],
   link: "https://scheduler.pandajiny.com",
   post: {
     descriptions: [
@@ -41,6 +50,14 @@ export const SchedulerProject: Project = {
         title: "Custom Router 작성 : Framework 없이 구현하는 SPA2",
         link: "https://pandajiny.tistory.com/12",
       },
+      {
+        title: "Nest.js : Express.js 와는 또 다른 장점",
+        link: "https://pandajiny.tistory.com/14",
+      },
+      {
+        title: "서비스 운영 플랫폼, 기초의 중요성",
+        link: "https://pandajiny.tistory.com/15",
+      },
     ],
   },
 };
@@ -49,7 +66,7 @@ export const AuthServiceProject: Project = {
   title: "Auth Service",
   description:
     "각각의 서비스 간 공통으로 사용되는 보안 모듈입니다. 세션을 기반으로 동작합니다.",
-  stacks: ["node", "express", "docker", "typescript"],
+  stacks: ["node", "express", "docker", "typescript", "mysql"],
   linkIntroduce:
     "https://pandajiny.tistory.com/category/Projects/Auth%20Service",
   post: {
@@ -72,7 +89,7 @@ export const AuthServiceProject: Project = {
 export const FoodgramProject: Project = {
   title: "Foodgram",
   description: "네이버 지도 API 를 사용하여 만든 맛집 지도 어플리케이션입니다.",
-  stacks: ["react", "nest", "docker", "node", "typescript"],
+  stacks: ["react", "nest", "docker", "node", "typescript", "mysql", "express"],
   link: "https://food.pandajiny.com",
   linkIntroduce: "https://pandajiny.tistory.com/category/Projects/Foodgram",
   post: {

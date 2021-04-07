@@ -5,10 +5,11 @@ import React from "react";
 
 const project = FoodgramProject;
 export default function () {
+  const { stacks } = project;
   const { descriptions, posts } = project.post;
   return (
     <PageComponent pageName="project-foodgram" title="Foodgram project">
-      <ProjectPost descriptions={descriptions} posts={posts} />
+      <ProjectPost descriptions={descriptions} posts={posts} stacks={stacks} />
     </PageComponent>
   );
 }

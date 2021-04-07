@@ -3,8 +3,8 @@ import {
   AuthServiceProject,
   BlogProject,
   FoodgramProject,
+  Post,
   Project,
-  ProjectPost as ProjectPostInterface,
   SchedulerProject,
 } from "./data";
 import { Stack, StackIcons } from "../icons/stack-icons";
@@ -70,7 +70,7 @@ function ProjectItem(props: { project: Project }) {
 
   return (
     <div className="project-item">
-      <StackIcons stacks={stacks} />
+      <StackIcons displayCount={3} stacks={stacks} />
       <Title />
       {link && <Link />}
       <p className="posts">
@@ -83,9 +83,19 @@ function ProjectItem(props: { project: Project }) {
   );
 }
 
-export function ProjectPost({ descriptions, posts }: ProjectPostInterface) {
+interface ProjectPostInterface {
+  descriptions: string[];
+  posts: Post[];
+  stacks: Stack[];
+}
+export function ProjectPost({
+  descriptions,
+  posts,
+  stacks,
+}: ProjectPostInterface) {
   return (
     <div className="project-post">
+      <StackIcons stacks={stacks} />
       <h2>프로젝트 설명</h2>
       {descriptions.map((sentence) => (
         <p className="description">&nbsp;&nbsp;{sentence}</p>

@@ -39,13 +39,13 @@ interface StackIconsProps {
   displayCount?: number;
 }
 
-export const StackIcons = ({ displayCount = 3, stacks }: StackIconsProps) => {
+export const StackIcons = ({ displayCount, stacks }: StackIconsProps) => {
   return (
     <div className="stack-icons">
-      {stacks.slice(0, displayCount).map((stack) => (
+      {stacks.slice(0, displayCount || stacks.length).map((stack) => (
         <Icon src={ICONS[stack]} />
       ))}
-      {stacks.length > displayCount && <Icon src={ICON_MORE} />}
+      {displayCount && stacks.length > displayCount && <Icon src={ICON_MORE} />}
     </div>
   );
 };
