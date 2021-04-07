@@ -1,0 +1,2 @@
+(self.webpackChunkblog=self.webpackChunkblog||[]).push([[324],{9376:function(e,t,s){"use strict";s.r(t),s.d(t,{default:function(){return i}});var c=s(7301),r=s(4192),n=s(8207),a=s(7294),u=n.CI;function i(){var e=u.stacks,t=u.post,s=t.descriptions,n=t.posts;return a.createElement(c.I,{pageName:"auth-service",title:"Project auth service"},a.createElement(r.$,{descriptions:s,posts:n,stacks:e}))}}}]);
+//# sourceMappingURL=component---src-pages-projects-auth-service-index-tsx-839e4589896f05f77eb3.js.map

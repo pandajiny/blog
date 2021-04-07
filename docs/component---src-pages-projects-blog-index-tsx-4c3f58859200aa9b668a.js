@@ -1,0 +1,2 @@
+(self.webpackChunkblog=self.webpackChunkblog||[]).push([[951],{7286:function(e,t,s){"use strict";s.r(t),s.d(t,{default:function(){return p}});var c=s(7301),n=s(4192),o=s(8207),r=s(7294),a=o.GT;function p(){var e=a.stacks,t=a.post,s=t.descriptions,o=t.posts;return r.createElement(c.I,{pageName:"project-blog",title:"Blog project"},r.createElement(n.$,{descriptions:s,posts:o,stacks:e}))}}}]);
+//# sourceMappingURL=component---src-pages-projects-blog-index-tsx-4c3f58859200aa9b668a.js.map
