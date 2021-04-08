@@ -3,6 +3,7 @@ import "./index.scss";
 
 import ICON_MAIL from "@icons/icon_mail.svg";
 import ICON_PHONE from "@icons/icon_phone.svg";
+import ICON_WEB from "@icons/icon_web.svg";
 
 import ICON_GITHUB from "../../images/icons/icon_github.png";
 import ICON_INSTAGRAM from "../../images/icons/icon_instagram.png";
@@ -35,6 +36,8 @@ export const Icon = ({
     </div>
   );
 };
+
+export const IconWeb = () => <Icon size={18} src={ICON_WEB} isRound={false} />;
 
 export const IconMail = () => (
   <Icon size={18} src={ICON_MAIL} isRound={false} />

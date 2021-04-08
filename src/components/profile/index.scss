@@ -48,7 +48,8 @@
       padding: 0px;
     }
 
-    > label {
+    > a,
+    label {
       height: min-content;
       font-size: 14px;
       color: colors.$text-secondary;
@@ -57,7 +58,7 @@
   }
 
   > .sns-icons {
-    margin-top: 16px;
+    margin-top: 20px;
     display: flex;
     flex-direction: row;
     margin-bottom: 16px;
