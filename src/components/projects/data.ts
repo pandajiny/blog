@@ -72,6 +72,7 @@ export const AuthServiceProject: Project = {
   post: {
     descriptions: [
       "개발한 어플리케이션 간 공용으로 사용하는 보안 모듈입니다. express.js 와 Redis Database를 사용한 세션 기반의 서비스로, .pandajiny.com 도메인을 공유하는 서비스 간 통용됩니다.",
+      "여러 도메인과 주소를 넘어서 동작하는 어플리케이션을 구성하며 HTTP 통신의 기초를 익힐 수 있었습니다. 여러 프로젝트에서 공유하는 서비스인 만큼 보다 확실한 코드를 작성하고 싶어 여러 개념을 공부하게 되었습니다.",
     ],
     posts: [
       {
@@ -81,6 +82,11 @@ export const AuthServiceProject: Project = {
       {
         title: "세션 기반 보안 서비스 구축하기",
         link: "https://pandajiny.tistory.com/11",
+      },
+      {
+        title:
+          "Express.js 를 통해 깔끔한 Back-end Application 을 작성하는 방법",
+        link: "https://pandajiny.tistory.com/17",
       },
     ],
   },
@@ -94,12 +100,17 @@ export const FoodgramProject: Project = {
   linkIntroduce: "https://pandajiny.tistory.com/category/Projects/Foodgram",
   post: {
     descriptions: [
-      "지도 API를 바탕으로 개발된 평소에 관심있었던 식당을 저장 및 리뷰하는 서비스 입니다.",
+      "지도 API를 바탕으로 개발된 평소에 관심있었던 식당을 저장 및 리뷰하는 서비스 입니다. API는 네이버와 Google 의 것을 사용하였으며, 각각의 API를 사용하기 편한 형태로 재가공하였습니다.",
+      "예전부터 맛집을 찾아다니거나, 나만 알고 있는 장소를 모으는 것을 좋아했는데 해당 서비스를 직접 구현해보고 싶어 제작했습니다. 프로젝트를 진행하며 외부 서비스를 어떻게 사용해야할지, 어떤 부분은 직접 구현하는게 좋은지에 대한 고민을 하고 또 배워갈 수 있었습니다.",
     ],
     posts: [
       {
         title: "프로젝트 개요",
         link: "https://pandajiny.tistory.com/9",
+      },
+      {
+        title: "Naver 지도 API, Google Map API를 융합해 사용하는 방법",
+        link: "https://pandajiny.tistory.com/16",
       },
     ],
   },
