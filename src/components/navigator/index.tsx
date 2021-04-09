@@ -1,4 +1,5 @@
 import React from "react";
+import { useHistory, useLocation } from "react-router";
 import "./index.scss";
 
 export interface NavigatorProps {
@@ -31,18 +32,17 @@ export function Navigator() {
   );
 }
 
-const isActive = (href: string): boolean => {
-  if (typeof window == "undefined") {
-    console.log(`there's no window object`);
-    return false;
-  }
-  return (
-    window.location.pathname.replace("/", "").replace("/", "") ==
-    href.replace("/", "")
-  );
-};
-
 function NavItem({ title, href }: NavItemProps) {
+  const isActive = (href: string): boolean => {
+    if (typeof window == "undefined") {
+      console.log(`there's no window object`);
+      return false;
+    }
+    return (
+      location.pathname.replace("/", "").replace("/", "") ==
+      href.replace("/", "")
+    );
+  };
   return (
     <div className="nav-item">
       <a className={isActive(href) ? "active" : ""} href={href}>

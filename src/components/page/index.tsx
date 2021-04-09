@@ -28,13 +28,13 @@ export const PageComponent = (props: PageProps) => {
       <div className="header">
         <h2 className="blog-title">Pandajiny blog.</h2>
         <h3 className="page-title">{title}</h3>
-        <Icon className="extend-button" onClick={enableNav} src={ICON_EXTEND} />
+        {/* <Icon className="extend-button" onClick={enableNav} src={ICON_EXTEND} /> */}
       </div>
       <div className={`sidebar ${isDisplayNav && "active"}`}>
         <button className="close-button" onClick={disableNav}>
           Close tab
         </button>
-        <Navigator />
+        {/* <Navigator /> */}
         <Profile />
       </div>
       <div className="content">{props.children}</div>

@@ -50,7 +50,7 @@ function ProjectItem(props: { project: Project }) {
     linkIntroduce,
   } = props.project;
   function goIntroducePage() {
-    location.href = `/projects/${title.toLowerCase().replace(" ", "-")}`;
+    location.href = `/${title.toLowerCase().replace(" ", "-")}`;
     // if (introducePage) {
     //   location.href = introducePage;
     // }
