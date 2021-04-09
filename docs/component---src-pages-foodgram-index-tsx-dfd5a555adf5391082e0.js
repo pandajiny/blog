@@ -1,0 +1,2 @@
+(self.webpackChunkblog=self.webpackChunkblog||[]).push([[563],{9785:function(e,t,s){"use strict";s.r(t),s.d(t,{default:function(){return p}});var o=s(8812),r=s(2259),c=s(8207),n=s(7294),a=c.bw;function p(){var e=a.stacks,t=a.post,s=t.descriptions,c=t.posts;return n.createElement(o.I,{pageName:"project-foodgram",title:"Foodgram project"},n.createElement(r.$,{descriptions:s,posts:c,stacks:e}))}}}]);
+//# sourceMappingURL=component---src-pages-foodgram-index-tsx-dfd5a555adf5391082e0.js.map
